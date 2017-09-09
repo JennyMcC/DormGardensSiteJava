@@ -1,9 +1,8 @@
 <!DOCTYPE html>	
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<link rel="stylesheet" type="text/css" href="design.css">
-	<link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="design.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans" />
 </head>
 <body>
 	<header>
@@ -25,7 +24,7 @@
 		<h3>price:</h3>
 		<input type="checkbox" class="filter"></input><label>$15</label>
 		<input type="checkbox" class="filter"></input><label>$20</label>
-		<br>
+		<br></br>
 		<h3>planter shade:</h3>
 		<input type="checkbox" class="filter"></input><label>light</label>
 		<input type="checkbox" class="filter"></input><label>medium</label>
@@ -41,7 +40,15 @@
 
 
 	<div class="pic-container">
-
+		<div class="gallery" th:each="currentTags: ${tags.plant}">
+			<a>
+				<img th:src="${currentPlant.picture}" class="plant" alt="plant" width="150" height="50"></img>
+			</a>
+		
+			<div class="price">
+ 		 		<p th:text="${currentPlant.price}"></p>
+ 			</div>
+		</div>
 	</div>
 
 

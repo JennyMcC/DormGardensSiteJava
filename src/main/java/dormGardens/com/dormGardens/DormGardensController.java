@@ -27,5 +27,11 @@ public class DormGardensController {
 		model.addAttribute(plantRepo.findOne(id));
 		return "plant";
 	}
+	
+	@RequestMapping("/tag")
+	public String fetchTag(@RequestParam("id") long id, Model model) {
+		model.addAttribute(tagsRepo.findOne(id));
+		return "tag";
+	}
 
 }

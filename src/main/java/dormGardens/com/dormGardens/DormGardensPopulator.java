@@ -29,9 +29,9 @@ public class DormGardensPopulator implements CommandLineRunner {
 		tagsRepo.save(dark);
 		
 		
-		Plant plant1 = new Plant("Ironwood Succulent Planter", "/images/plant1.jpg", 15, price15, medium);
-		Plant plant2 = new Plant("Marblewood Succulent Planter", "/images/plant2.jpg", 15, price15, light);
-		Plant plant3 = new Plant("African Padauk Succulent Planter", "/images/plant3.jpg", 15, price15, medium);
+		Plant plant1 = new Plant("Ironwood Succulent Planter", "/images/plant1.jpg", "15", price15, medium);
+		Plant plant2 = new Plant("Marblewood Succulent Planter", "/images/plant2.jpg", "15", price15, light);
+		Plant plant3 = new Plant("African Padauk Succulent Planter", "/images/plant3.jpg", "15", price15, medium);
 		
 		plantRepo.save(plant1);
 		plantRepo.save(plant2);

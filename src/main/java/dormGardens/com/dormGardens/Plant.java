@@ -17,7 +17,7 @@ public class Plant {
 	private Long id;
 	private String name;
 	private String picture;
-	private double price;
+	private String price;
 	
 	@ManyToMany
 	private Set<Tags> tag;
@@ -35,8 +35,8 @@ public class Plant {
 		return picture;
 	}
 	
-	public double getPrice() {
-		return price;
+	public String getPrice() {
+		return "price: $" + price;
 	}
 	
 	public Set<Tags> getTag() {
@@ -46,7 +46,7 @@ public class Plant {
 	private Plant() {}
 	
 	
-	public Plant(String name, String picture, double price, Tags...tag) {
+	public Plant(String name, String picture, String price, Tags...tag) {
 		this.name = name;
 		this.picture = picture;
 		this.price = price;

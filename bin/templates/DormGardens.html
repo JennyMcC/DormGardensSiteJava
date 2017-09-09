@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<link rel="stylesheet" type="text/css" href="design.css" />
-	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans" />
 </head>
 <body>
 	<header>
@@ -18,21 +18,26 @@
 
 <div class="mainPage">
 
-	<div class="filterList">
-		<h2>filter by:</h2>
-		<h3>price:</h3>
-		<input type="checkbox" class="filter"></input><label>$15</label>
-		<input type="checkbox" class="filter"></input><label>$20</label>
-		<br></br>
-		<h3>planter shade:</h3>
-		<input type="checkbox" class="filter"></input><label>light</label>
-		<input type="checkbox" class="filter"></input><label>medium</label>
-		<input type="checkbox" class="filter"></input><label>dark</label>
 
-		<div class="button-container">
-			<button id="generatePlantsByFilter" name="generatePlantsByFilter">search</button>
-		</div>
-	</div>
+	<div class="filterList" th:each="tags: ${tags}" >
+		<a th:href="@{/tag(id=${tags.id})}" th:text="${tags.name}">
+		</a>
+	</div>	
+	
+	
+	
+	
+	<form class="filterList">
+	<input type="hidden" name="plantId" th:value="${plant.id}" />
+		<li th:each="tags: ${plant.tag}">
+			<a th:href="@{/tag(id=${tags.id})}" th:text="${tags.name}" ></a>
+			<button class="button" name="tagsId" th:value="${tags.id}" th:formaction="@{/tag/delete}">delete</button>
+		</li>
+	</form>
+	
+	
+	
+		
 
 
 	<div class="pic-container">
