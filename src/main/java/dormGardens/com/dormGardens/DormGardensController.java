@@ -17,9 +17,15 @@ public class DormGardensController {
 	private TagsRepo tagsRepo;
 	
 	@RequestMapping("/DormGardens")
-	public String fetchPlants(@RequestParam("id") long id, Model model) {
+	public String fetchPlant(Model model) {
+		model.addAttribute("plant", plantRepo.findAll());
+		return "DormGardens";
+	}
+	
+	@RequestMapping("/plant")
+	public String fetchPlant(@RequestParam("id") long id, Model model) {
 		model.addAttribute(plantRepo.findOne(id));
-		return "plants";
+		return "plant";
 	}
 
 }

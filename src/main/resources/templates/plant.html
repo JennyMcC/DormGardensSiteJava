@@ -20,7 +20,6 @@
 <div class="mainPage">
 	<div class="filterList">
 
-		
 
 		<h2>filter by:</h2>
 		<h3>price:</h3>
@@ -32,7 +31,6 @@
 		<input type="checkbox" class="filter"></input><label>medium</label>
 		<input type="checkbox" class="filter"></input><label>dark</label>
 
-		
 
 		<div class="button-container">
 			<button id="generatePlantsByFilter" name="generatePlantsByFilter">search</button>
@@ -41,25 +39,14 @@
 	</div>
 
 
+
 	<div class="pic-container">
 
-
-	<div class="gallery" th:each="currentPlant: ${plant}">
-	
-		<a th:href="@{/plant(id=${currentPlant.id})}">
-			<img th:src="${plant.picture}" class="plant" alt="plant" width="150" height="50">
-		</a>
-		
-		<div class="price">
- 		 	<p th:text"${plant.price}"></p>
- 		</div>
-		
 	</div>
 
 
 
 
-	</div>
 
 
 	<div class="aboutUs">
@@ -73,8 +60,6 @@
 	</div>
 
 </div>
-
-
 
 
 

@@ -17,6 +17,7 @@ public class Plant {
 	private Long id;
 	private String name;
 	private String picture;
+	private double price;
 	
 	@ManyToMany
 	private Set<Tags> tag;
@@ -29,18 +30,26 @@ public class Plant {
 	public String getName() {
 		return name;
 	}
+	
 	public String getPicture() {
 		return picture;
+	}
+	
+	public double getPrice() {
+		return price;
 	}
 	
 	public Set<Tags> getTag() {
 		return tag;
 	}
 	
+	private Plant() {}
 	
-	public Plant(String name, String picture, Tags...tag) {
+	
+	public Plant(String name, String picture, double price, Tags...tag) {
 		this.name = name;
 		this.picture = picture;
+		this.price = price;
 		this.tag = new HashSet<>(Arrays.asList(tag));
 	}
 	

@@ -42,100 +42,19 @@
 
 
 	<div class="pic-container">
+
+
+	<div class="gallery" th:each="currentPlant: ${plant}">
+	
+		<a th:href="@{/plant(id=${currentPlant.id})}">
+			<img th:src="${plant.picture}" class="plant" alt="plant" width="150" height="50">
+		</a>
 		
-		<div class="responsive">
-		<div class="gallery">
-  			<a target="_blank" href="images/plant1.jpg">
-   				 <img src="images/plant1.jpg" alt="plant1" width="150" height="50">
- 			</a>
- 		 	<div class="price">price: $15</div>
-		</div>
-		</div>
-
-		<div class="responsive">
-		<div class="gallery">
-  			<a target="_blank" href="images/plant2.jpg">
-   				 <img src="images/plant2.jpg" alt="plant2" width="150" height="50">
- 			</a>
- 		 	<div class="price">price: $15</div>
-		</div>
-		</div>
-
-		<div class="responsive">
-		<div class="gallery">
-  			<a target="_blank" href="images/plant3.jpg">
-   				 <img src="images/plant3.jpg" alt="plant3" width="150" height="50">
- 			</a>
- 		 	<div class="price">price: $15</div>
-		</div>
-		</div>
-
-		<div class="responsive">
-		<div class="gallery">
-  			<a target="_blank" href="images/plant4.jpg">
-   				 <img src="images/plant4.jpg" alt="plant4" width="150" height="50">
- 			</a>
- 		 	<div class="price">price: $20</div>
-		</div>
-		</div>
-
-		<div class="responsive">
-		<div class="gallery">
-  			<a target="_blank" href="images/plant5.jpg">
-   				 <img src="images/plant5.jpg" alt="plant5" width="150" height="50">
- 			</a>
- 		 	<div class="price">price: $20</div>
-		</div>
-		</div>
-
-		<div class="responsive">
-		<div class="gallery">
-  			<a target="_blank" href="images/plant6.jpg">
-   				 <img src="images/plant6.jpg" alt="plant6" width="150" height="50">
- 			</a>
- 		 	<div class="price">price: $20</div>
-		</div>
-		</div>
-
-		<div class="responsive">
-		<div class="gallery">
-  			<a target="_blank" href="images/plant7.jpg">
-   				 <img src="images/plant7.jpg" alt="plant7" width="150" height="50">
- 			</a>
- 		 	<div class="price">price: $20</div>
-		</div>
-		</div>
-
-		<div class="responsive">
-		<div class="gallery">
-  			<a target="_blank" href="images/plant8.jpg">
-   				 <img src="images/plant8.jpg" alt="plant8" width="150" height="50">
- 			</a>
- 		 	<div class="price">price: $20</div>
-		</div>
-		</div>
-
-		<div class="responsive">
-		<div class="gallery">
-  			<a target="_blank" href="images/plant9.jpg">
-   				 <img src="images/plant9.jpg" alt="plant9" width="150" height="50">
- 			</a>
- 		 	<div class="price">price: $20</div>
-		</div>
-		</div>
-
-
-
-
-		<div class="responsive">
-		<div class="gallery">
-  			<a target="_blank" href="images/plant9.jpg">
-   				 <img src="images/plant9.jpg" class="plant" alt="plant" width="150" height="50">
- 			</a>
- 		 	<div class="price">price: $20</div>
-		</div>
-		</div>
-
+		<div class="price">
+ 		 	<p th:text"${plant.price}"></p>
+ 		</div>
+		
+	</div>
 
 
 
@@ -162,6 +81,6 @@
 
 </main>
 
-<script src="script.js"></script>
+
 </body>
 </html>
