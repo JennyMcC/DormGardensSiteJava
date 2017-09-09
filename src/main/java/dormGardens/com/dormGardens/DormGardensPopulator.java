@@ -13,9 +13,9 @@ public class DormGardensPopulator implements CommandLineRunner {
 	
 	public void run(String... args) throws Exception {
 		
-		Plant plant1 = new Plant("Ironwood Succulent Planter", "/images/plant1.jpg", 15, "medium");
-		Plant plant2 = new Plant("Marblewood Succulent Planter", "/images/plant2.jpg", 15, "light");
-		Plant plant3 = new Plant("African Padauk Succulent Planter", "/images/plant3.jpg", 15, "medium");
+		Plant plant1 = new Plant("Ironwood Succulent Planter", "/images/plant1.jpg");
+		Plant plant2 = new Plant("Marblewood Succulent Planter", "/images/plant2.jpg");
+		Plant plant3 = new Plant("African Padauk Succulent Planter", "/images/plant3.jpg");
 		
 		plantRepo.save(plant1);
 		plantRepo.save(plant2);

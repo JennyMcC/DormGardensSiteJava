@@ -1,7 +1,5 @@
 package dormGardens.com.dormGardens;
 
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -10,42 +8,33 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Plant {
-	
+public class Tags {
+
 	@Id
 	@GeneratedValue
 	private Long id;
 	private String name;
-	private String picture;
 	
-	@ManyToMany
-	private Set<Tags> tag;
-	
-	
+	@ManyToMany(mappedBy="tag")
+	private Set<Plant> plants;
+
 	public Long getId() {
 		return id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
-	public String getPicture() {
-		return picture;
-	}
-	
-	public Set<Tags> getTag() {
-		return tag;
-	}
-	
-	
-	public Plant(String name, String picture, Tags...tag) {
-		this.name = name;
-		this.picture = picture;
-		this.tag = new HashSet<>(Arrays.asList(tag));
-	}
-	
-	
-	
-	
 
+	public Set<Plant> getPlants() {
+		return plants;
+	}
+	
+	public Tags() {}
+	
+	public Tags(String name) {
+		this.name = name;
+	}
+	
+	
 }
