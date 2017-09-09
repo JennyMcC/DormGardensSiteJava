@@ -13,6 +13,9 @@ public class DormGardensController {
 	@Resource
 	private PlantRepo plantRepo;
 	
+	@Resource
+	private TagsRepo tagsRepo;
+	
 	@RequestMapping("/DormGardens")
 	public String fetchPlants(@RequestParam("id") long id, Model model) {
 		model.addAttribute(plantRepo.findOne(id));
