@@ -19,22 +19,12 @@
 <div class="mainPage">
 
 
-	<div class="filterList" th:each="tags: ${tags}" >
-		<a th:href="@{/tag(id=${tags.id})}" th:text="${tags.name}">
-		</a>
+	<div class="filterList">
+		<ul th:each="currentTags: ${tags}">
+			<a th:href="@{/tag(id=${currentTags.id})}" th:text="${tags.name}">
+			</a>
+		</ul>
 	</div>	
-	
-	
-	
-	
-	<form class="filterList">
-	<input type="hidden" name="plantId" th:value="${plant.id}" />
-		<li th:each="tags: ${plant.tag}">
-			<a th:href="@{/tag(id=${tags.id})}" th:text="${tags.name}" ></a>
-			<button class="button" name="tagsId" th:value="${tags.id}" th:formaction="@{/tag/delete}">delete</button>
-		</li>
-	</form>
-	
 	
 	
 		
