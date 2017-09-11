@@ -9,7 +9,7 @@
 		<h1 class="name">dorm gardens</h1>
 			<nav>
 				<ul>
-					<a href="mailto:dormgardens@email.com">contact us</a>
+					<a href="mailto:dormgardens@gmail.com">contact us</a>
 				</ul>
 			</nav>	
 	</header>	
@@ -20,10 +20,11 @@
 
 
 	<div class="filterList">
-		<ul th:each="currentTags: ${tags}">
-			<a th:href="@{/tag(id=${currentTags.id})}" th:text="${tags.name}">
+		<h2>filter by</h2>
+		<div th:each="tags: ${plant.tag}">
+			<a th:href="@{/tag(id=${tags.id})}" th:text="${tags.name}">
 			</a>
-		</ul>
+		</div>
 	</div>	
 	
 	
