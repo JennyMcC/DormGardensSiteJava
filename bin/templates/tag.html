@@ -17,40 +17,36 @@
 <main>
 
 <div class="mainPage">
+
 	<div class="filterList">
 
-
-		<h2>filter by:</h2>
-		<h3>price:</h3>
-		<input type="checkbox" class="filter"></input><label>$15</label>
-		<input type="checkbox" class="filter"></input><label>$20</label>
-		<br></br>
-		<h3>planter shade:</h3>
-		<input type="checkbox" class="filter"></input><label>light</label>
-		<input type="checkbox" class="filter"></input><label>medium</label>
-		<input type="checkbox" class="filter"></input><label>dark</label>
-
-
-		<div class="button-container">
-			<button id="generatePlantsByFilter" name="generatePlantsByFilter">search</button>
+		<h2>show only</h2>
+		
+		<div class="filter">
+  		
+  			<ul th:each="currentTag: ${tags}">
+  				<a th:href="@{/tag(id=${currentTag.id})}">
+  				<h3 th:text="${currentTag.name}"></h3></a>
+  			</ul>
+			
 		</div>
-
-	</div>
+	</div>	
 
 
 
 	<div class="pic-container">
 	
-	<h1 th:each="currentTag: ${tag}" th:text="${currentTag.name}"></h1>
+		<h1 th:each="currentTag: ${tag}" th:text="${currentTag.name}"></h1>
 	
 		<div class="gallery" th:each="currentTags: ${tags.plants}">
-			<a>
+			<a th:href="@{/plant(id=${currentTags.id})}">
 				<img th:src="${currentTags.picture}" class="plant" alt="plant" width="150" height="50"></img>
 			</a>
 		
 			<div class="price">
  		 		<p th:text="${currentTags.price}"></p>
  			</div>
+ 			
 		</div>
 	</div>
 
