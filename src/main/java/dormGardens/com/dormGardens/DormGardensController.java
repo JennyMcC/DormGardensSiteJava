@@ -19,6 +19,7 @@ public class DormGardensController {
 	@RequestMapping("/DormGardens")
 	public String fetchPlant(Model model) {
 		model.addAttribute("plant", plantRepo.findAll());
+		model.addAttribute("tags", tagsRepo.findAll());
 		return "DormGardens";
 	}
 	

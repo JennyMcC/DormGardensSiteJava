@@ -22,7 +22,6 @@ public class Plant {
 	@ManyToMany
 	private Set<Tags> tag;
 	
-	
 	public Long getId() {
 		return id;
 	}
@@ -43,6 +42,7 @@ public class Plant {
 		return tag;
 	}
 	
+	@SuppressWarnings("unused")
 	private Plant() {}
 	
 	

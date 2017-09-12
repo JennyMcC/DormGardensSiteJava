@@ -40,12 +40,13 @@
 
 
 	<div class="pic-container">
-		<div class="gallery" th:each="currentTags: ${tags.plant}">
+		<div class="gallery" th:each="currentPlant: ${plant}">
 			<a>
-				<img th:src="${currentPlant.picture}" class="plant" alt="plant" width="150" height="50"></img>
+				<img th:src="${currentPlant.picture}" class="plant" alt="plant" width="300" height="100"></img>
 			</a>
 		
 			<div class="price">
+				<p th:text="${currentPlant.name}"></p>
  		 		<p th:text="${currentPlant.price}"></p>
  			</div>
 		</div>
