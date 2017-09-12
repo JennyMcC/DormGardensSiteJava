@@ -20,25 +20,14 @@
 
 
 	<div class="filterList">
-		<h2>filter by</h2>
+		<h2>show only</h2>
+		
 		<div class="filter">
-		
-		<form>
-  		<input type="radio" name="gender" th:value="${tags}"></input>
-  			<li th:each="currentTag: ${tags}">
-  			
-  				
-  				<h3 th:text="${currentTag.name}"></h3>
-			
-  			</li>
-  			
-  		<br></br>
-  			<button class="button" name="tagId" th:value="${tag}" th:formaction="@{/tag}">select</button>
-  		</form>
-		
-		
-		
-		
+  		
+  			<ul th:each="currentTag: ${tags}">
+  				<a th:href="@{/tag(id=${currentTag.id})}">
+  				<h3 th:text="${currentTag.name}"></h3></a>
+  			</ul>
 			
 		</div>
 	</div>	

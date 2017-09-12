@@ -16,11 +16,11 @@ public class DormGardensPopulator implements CommandLineRunner {
 	
 	public void run(String... args) throws Exception {
 		
-		Tags price15 = new Tags("$15");
-		Tags price20 = new Tags("$20");
-		Tags light = new Tags("light");
-		Tags medium = new Tags("medium");
-		Tags dark = new Tags("dark");
+		Tags price15 = new Tags("$15 plants");
+		Tags price20 = new Tags("$20 plants");
+		Tags light = new Tags("light wood");
+		Tags medium = new Tags("medium wood");
+		Tags dark = new Tags("dark wood");
 		
 		tagsRepo.save(price15);
 		tagsRepo.save(price20);

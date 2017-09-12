@@ -18,7 +18,7 @@ body {
 	background-color: #E3E1DC;
 }
 
-h1, h2, h3 {
+h1, h2 {
 	text-decoration: underline;
 }
 
@@ -96,5 +96,4 @@ img:hover {
 
 .filter {
 	margin: 10px;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }	
