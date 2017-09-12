@@ -56,6 +56,19 @@ button {
 	margin-top: 10px;
 }
 
+.filter {
+	padding-top: 10px;
+	margin-left: -10px;
+}
+
+.filter ul a {
+	color: black;
+}
+
+.filter ul a:hover {
+	color: #590E87;
+}
+
 .pic-container {
 	display: flex;
     flex-wrap: wrap;
@@ -92,8 +105,4 @@ img:hover {
 
 .price {
 	padding-left: 10px;
-}
-
-.filter {
-	margin: 10px;
 }	
