@@ -21,9 +21,12 @@
 
 	<div class="filterList">
 		<h2>filter by</h2>
-		<div th:each="tags: ${plant.tag}">
-			<a th:href="@{/tag(id=${tags.id})}" th:text="${tags.name}">
+		<div class="filter">
+			<li th:each="tag: ${tags}">
+			<a th:href="@{/tag(id=${tags.id})}">
+			<h3 th:text="${tags.name}"></h3>
 			</a>
+			</li>
 		</div>
 	</div>	
 	
