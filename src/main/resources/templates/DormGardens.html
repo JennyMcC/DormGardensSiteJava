@@ -4,7 +4,11 @@
 	<link rel="stylesheet" type="text/css" href="design.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans" />
 </head>
+
+
 <body>
+
+
 	<header>
 		<h1 class="name">dorm gardens</h1>
 			<nav>
@@ -13,21 +17,21 @@
 				</ul>
 			</nav>	
 	</header>	
+	
 
 <main>
+
 
 <div class="mainPage">
 
 	<div class="filterList">
 		<h2>show only:</h2>
 		<div class="filter">
-		
   			<ul th:each="currentTag: ${tags}">
   				<a th:href="@{/tag(id=${currentTag.id})}">
   				<h3 th:text="${currentTag.name}"></h3></a>
   				<br></br>
   			</ul>
-  			
 		</div>
 	</div>	
 	
@@ -59,6 +63,11 @@
 
 </main>
 
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		crossorigin="anonymous"></script>
+		
+	<script type="text/javascript" src="script.js"></script>
 
 </body>
 </html>
