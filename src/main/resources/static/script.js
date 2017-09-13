@@ -26,7 +26,7 @@ var initPage = function(jsonResponseUrl) {
 					tagNames += '<li >' + plant.tags[j].displayName + '</li>';
 				}
 				
-				var stringContent = '.gallery' + plant.picture + '.price' + plant.price
+				var stringContent = '.pic-container' + plant.picture + '.price' + plant.price
 				
 				return stringContent;
 			}
