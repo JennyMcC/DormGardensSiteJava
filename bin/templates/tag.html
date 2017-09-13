@@ -24,10 +24,16 @@
 		
 		<div class="filter">
   		
-  			<ul th:each="currentTag: ${tags}">
-  				<a th:href="@{/tag(id=${currentTag.id})}">
-  				<h3 th:text="${currentTag.name}"></h3></a>
+  			<ul th:each="tag: ${tags}">
+  				<a th:href="@{/tag(id=${tag.id})}">
+  				<h3 th:text="${tag.name}"></h3></a>
   			</ul>
+  			
+  			<br></br>
+  			
+  			<div class="home">
+				<a href="#" onClick="history.go(-1);return true;">Back</a>
+	</div>
 			
 		</div>
 	</div>	

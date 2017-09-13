@@ -18,19 +18,19 @@
 
 <div class="mainPage">
 
-
 	<div class="filterList">
 		<h2>show only:</h2>
 		<div class="filter">
+		
   			<ul th:each="currentTag: ${tags}">
   				<a th:href="@{/tag(id=${currentTag.id})}">
   				<h3 th:text="${currentTag.name}"></h3></a>
   				<br></br>
   			</ul>
+  			
 		</div>
 	</div>	
 	
-
 	<div class="pic-container">
 		<div class="gallery" th:each="currentPlant: ${plant}">
 			<a th:href="@{/plant(id=${currentPlant.id})}">
@@ -55,10 +55,6 @@
 
 
 </div>
-
-
-
-
 
 
 </main>

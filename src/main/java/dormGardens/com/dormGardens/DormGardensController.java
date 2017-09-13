@@ -31,6 +31,7 @@ public class DormGardensController {
 	
 	@RequestMapping("/tag")
 	public String fetchTag(@RequestParam("id") long id, Model model) {
+		model.addAttribute("tags", tagsRepo.findAll());
 		model.addAttribute(tagsRepo.findOne(id));
 		return "tag";
 	}
