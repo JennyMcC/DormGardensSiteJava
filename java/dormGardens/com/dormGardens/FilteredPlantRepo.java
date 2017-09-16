@@ -1,6 +1,6 @@
 package dormGardens.com.dormGardens;
 
-//import static org.apache.commons.collections4.CollectionUtils.intersection;
+
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -27,7 +27,7 @@ public class FilteredPlantRepo {
 		Collection<Plant> tagged = new HashSet<>(currentTagsPlants);
 		while (tagsItr.hasNext()) {
 			currentTagsPlants = tagsItr.next().getPlants();
-			//tagged = intersection(tagged, currentTagsPlants);
+			tagged = intersection(tagged, currentTagsPlants);
 		}
 		return tagged;
 	}
