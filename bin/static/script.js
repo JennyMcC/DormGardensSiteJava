@@ -32,8 +32,8 @@ var initPage = function(jsonResponseUrl) {
 			
 			function setGallery(plant) {
 				var tagNames = "";
-				for (var j = 0; j < plant.tags.length; j++) {
-					tagNames += '<li >' + plant.tags[j].displayName + '</li>';
+				for (var j = 0; j < plant.tag.length; j++) {
+					tagNames += '<li >' + plant.tag[j].displayName + '</li>';
 				}
 				
 				var stringContent = '.pic-container' + plant.picture + '.price' + plant.price
