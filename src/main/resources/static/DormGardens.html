@@ -1,5 +1,5 @@
 <!DOCTYPE html>	
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 	<link rel="stylesheet" type="text/css" href="design.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans" />
@@ -43,12 +43,12 @@
 	</div>	
 	
 	<div class="pic-container">
-		<div class="gallery" th:each="currentPlant: ${plant}">
-			<a th:href="@{/plant(id=${currentPlant.id})}">
-				<img th:src="${currentPlant.picture}" class="plant" alt="plant" width="150" height="50"></img>
+		<div class="gallery">
+			<a href="@{/plant(id=${plant.id})}">
+				<img src="${plant.picture}" class="plant" alt="plant" width="150" height="50"></img>
 			</a>
 			<div class="price">
- 		 		<p th:text="${currentPlant.price}"></p>
+ 		 		<p text="plant.price"></p>
  			</div>
 		</div>
 	</div>

@@ -36,7 +36,9 @@ var initPage = function(jsonResponseUrl) {
 					tagNames += '<li >' + plant.tag[j].displayName + '</li>';
 				}
 				
-				var stringContent = '.pic-container' + plant.picture + '.price' + plant.price
+				var stringContent = //'.pic-container' + plant.picture + '.price' + plant.price
+				
+				document.querySelector('.pic-container')
 				
 				return stringContent;
 			}
@@ -64,6 +66,6 @@ $(document).ready(function() {
 					selectedTags.push(this.name);
 				});
 		
-		initPage("http://localhost:8080/DormGardens/byFilter/" + selectedFilters);
+		initPage("http://localhost:8080/DormGardens/byFilter/" + selectedTags);
 	}
 }
