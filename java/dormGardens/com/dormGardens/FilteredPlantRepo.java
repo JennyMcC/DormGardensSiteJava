@@ -1,6 +1,6 @@
 package dormGardens.com.dormGardens;
 
-
+import static org.apache.commons.collections4.CollectionUtils.intersection;
 
 import java.util.Collection;
 import java.util.HashSet;

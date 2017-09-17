@@ -58,10 +58,10 @@ $(document).ready(function() {
 	
 	$('button[name="generatePlantsByFilter"]')
 	.on('click', function() {
-		var selectedFilters = [];
+		var selectedTags = [];
 		$(".filter:checked").each(
 				function() {
-					selectedFilters.push(this.name);
+					selectedTags.push(this.name);
 				});
 		
 		initPage("http://localhost:8080/DormGardens/byFilter/" + selectedFilters);
