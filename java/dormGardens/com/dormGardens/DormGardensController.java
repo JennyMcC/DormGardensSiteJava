@@ -30,7 +30,7 @@ public class DormGardensController {
 	
 	
 	@RequestMapping("/plants")
-	public Iterable<Plant> allPlants() {
+	public Iterable<Plant> DormGardens() {
 		Iterable<Plant> plants = plantRepo.findAll();
 		return plants;
 	}
