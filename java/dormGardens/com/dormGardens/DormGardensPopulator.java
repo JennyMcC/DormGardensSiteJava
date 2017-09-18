@@ -14,6 +14,9 @@ public class DormGardensPopulator implements CommandLineRunner {
 	@Resource
 	private TagsRepo tagsRepo;
 	
+	@Resource
+	private FilteredPlantRepo filteredPlantRepo;
+	
 	public void run(String... args) throws Exception {
 		
 		Tags price15 = new Tags("$15 plants");

@@ -29,13 +29,13 @@ public class DormGardensController {
 //	}
 	
 	
-	@RequestMapping("/DormGardens")
+	@RequestMapping("/plants")
 	public Iterable<Plant> allPlants() {
 		Iterable<Plant> plants = plantRepo.findAll();
 		return plants;
 	}
 	
-	@RequestMapping("/DormGardens/byTags/{name}")
+	@RequestMapping("/plants/byTags/{name}")
 	public Iterable<Plant> plantsByTags(@PathVariable String[] name) {
 		Iterable<Plant> plantsByTags = filteredPlantRepo.findForTagsNamed(name);
 		return plantsByTags;

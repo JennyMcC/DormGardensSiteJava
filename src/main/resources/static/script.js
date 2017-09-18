@@ -58,7 +58,7 @@ var initPage = function(jsonResponseUrl) {
 
 $(document).ready(function() {
 	
-	initPage("http://localhost:8080/DormGardens");
+	initPage("http://localhost:8080/plants");
 	
 	$('button[name="generatePlantsByFilter"]').on('click', function() {
 		var selectedTags = [];
@@ -66,6 +66,6 @@ $(document).ready(function() {
 					selectedTags.push(this.name);
 				});
 		
-		initPage("http://localhost:8080/DormGardens/byTags/" + selectedTags);
+		initPage("http://localhost:8080/plants/byTags/" + selectedTags);
 	});
 });
