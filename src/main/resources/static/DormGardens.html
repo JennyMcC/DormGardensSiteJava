@@ -44,11 +44,9 @@
 	
 	<div class="pic-container">
 		<div class="gallery">
-			<a href="@{/plant(id=${plant.id})}">
-				<img src="${plant.picture}" class="plant" alt="plant" width="150" height="50"></img>
-			</a>
+				<img src=$(plant.picture) class="plant" alt="plant" width="150" height="50"></img>
 			<div class="price">
- 		 		<p text="plant.price"></p>
+ 		 		<p text=$(plant.price)></p>
  			</div>
 		</div>
 	</div>

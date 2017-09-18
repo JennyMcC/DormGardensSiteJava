@@ -58,14 +58,14 @@ var initPage = function(jsonResponseUrl) {
 
 $(document).ready(function() {
 	
-	$('button[name="generatePlantsByFilter"]')
-	.on('click', function() {
+	initPage("http://localhost:8080/DormGardens");
+	
+	$('button[name="generatePlantsByFilter"]').on('click', function() {
 		var selectedTags = [];
-		$(".filter:checked").each(
-				function() {
+		$(".filter:checked").each(function() {
 					selectedTags.push(this.name);
 				});
 		
-		initPage("http://localhost:8080/DormGardens/byFilter/" + selectedTags);
-	}
-}
+		initPage("http://localhost:8080/DormGardens/byTags/" + selectedTags);
+	});
+});

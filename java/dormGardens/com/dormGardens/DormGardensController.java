@@ -30,9 +30,9 @@ public class DormGardensController {
 	
 	
 	@RequestMapping("/DormGardens/byTags/{name}")
-	public Iterable<Plant> establishmentsByTags(@PathVariable String[] name) {
-		Iterable<Plant> establishmentsByTags = filteredPlantRepo.findForTagsNamed(name);
-		return establishmentsByTags;
+	public Iterable<Plant> plantsByTags(@PathVariable String[] name) {
+		Iterable<Plant> plantsByTags = filteredPlantRepo.findForTagsNamed(name);
+		return plantsByTags;
 	}
 	
 //	@RequestMapping("/plant")
