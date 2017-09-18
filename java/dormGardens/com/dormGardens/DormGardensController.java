@@ -21,13 +21,19 @@ public class DormGardensController {
 	@Resource
 	private FilteredPlantRepo filteredPlantRepo;
 	
-	@RequestMapping("/DormGardens")
-	public String fetchPlant(Model model) {
-		model.addAttribute("plant", plantRepo.findAll());
-		model.addAttribute("tags", tagsRepo.findAll());
-		return "DormGardens";
-	}
+//	@RequestMapping("/DormGardens")
+//	public String fetchPlant(Model model) {
+//		model.addAttribute("plant", plantRepo.findAll());
+//		model.addAttribute("tags", tagsRepo.findAll());
+//		return "DormGardens";
+//	}
 	
+	
+	@RequestMapping("/DormGardens")
+	public Iterable<Plant> allPlants() {
+		Iterable<Plant> plants = plantRepo.findAll();
+		return plants;
+	}
 	
 	@RequestMapping("/DormGardens/byTags/{name}")
 	public Iterable<Plant> plantsByTags(@PathVariable String[] name) {
