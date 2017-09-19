@@ -1,15 +1,12 @@
 package dormGardens.com.dormGardens;
 
 import javax.annotation.Resource;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 
-@Controller
+@RestController
 public class DormGardensController {
 	
 	@Resource
@@ -20,13 +17,6 @@ public class DormGardensController {
 	
 	@Resource
 	private FilteredPlantRepo filteredPlantRepo;
-	
-//	@RequestMapping("/DormGardens")
-//	public String fetchPlant(Model model) {
-//		model.addAttribute("plant", plantRepo.findAll());
-//		model.addAttribute("tags", tagsRepo.findAll());
-//		return "DormGardens";
-//	}
 	
 	
 	@RequestMapping("/plants")
@@ -41,6 +31,13 @@ public class DormGardensController {
 		return plantsByTags;
 	}
 	
+//	@RequestMapping("/DormGardens")
+//	public String fetchPlant(Model model) {
+//		model.addAttribute("plant", plantRepo.findAll());
+//		model.addAttribute("tags", tagsRepo.findAll());
+//		return "DormGardens";
+//	}
+//	
 //	@RequestMapping("/plant")
 //	public String fetchPlant(@RequestParam("id") long id, Model model) {
 //		model.addAttribute(plantRepo.findOne(id));

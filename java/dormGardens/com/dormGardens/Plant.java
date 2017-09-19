@@ -46,13 +46,16 @@ public class Plant {
 	private Plant() {}
 	
 	
-	public Plant(String name, String picture, String price, Tags...tag) {
+	public Plant(String name, String picture, String price) {
 		this.name = name;
 		this.picture = picture;
 		this.price = price;
-		this.tag = new HashSet<>(Arrays.asList(tag));
 	}
 	
+	public Plant(String name, String picture, String price, Tags...tag) {
+		this(name, picture, price);
+		this.tag = new HashSet<>(Arrays.asList(tag));
+	}
 	
 	
 	

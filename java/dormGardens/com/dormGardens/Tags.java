@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Tags {
 
@@ -15,6 +17,7 @@ public class Tags {
 	private Long id;
 	private String name;
 	
+	@JsonIgnore
 	@ManyToMany(mappedBy="tag")
 	private Set<Plant> plants;
 
