@@ -20,11 +20,19 @@ var initPage = function(jsonResponseUrl) {
 				picture = document.querySelector('.plant');
 				
 				price = document.querySelector('.price');
-			}
+		
 			
+			var gallery;
 			
-			
-			
+			document.querySelector.addListener(picture, 'click', function(picture, i) {
+				return function() {
+					gallery = new gallery({
+						content : galleryContent[i]
+					});
+					
+				}
+			})(picture, i));
+		}
 			
 //			for (var j = 0; i < allPlants.length; j++) {
 //				plant = allPlants[j];
@@ -33,7 +41,6 @@ var initPage = function(jsonResponseUrl) {
 			
 			
 			
-//			var gallery;
 //			
 //			function() {
 //				gallery = new Gallery({
@@ -43,14 +50,14 @@ var initPage = function(jsonResponseUrl) {
 			
 			
 			function setGallery(plant) {
-				var tagNames = "";
-				for (var j = 0; j < plant.tag.length; j++) {
-					tagNames += '<li >' + plant.tag[j].displayName + '</li>';
-				}
+//				var tagNames = "";
+//				for (var j = 0; j < plant.tag.length; j++) {
+//					tagNames += '<li >' + plant.tag[j].displayName + '</li>';
+//				}
 				
-				var stringContent = //'.pic-container' + plant.picture + '.price' + plant.price
+//				var stringContent = '.pic-container' + plant.picture + '.price' + plant.price
 				
-				document.querySelector('.pic-container')
+				var stringContent = document.querySelector('.pic-container')
 				
 				return stringContent;
 			}
