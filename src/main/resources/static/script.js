@@ -10,16 +10,28 @@ var initPage = function(jsonResponseUrl) {
 			var galleryContent = [];
 			var price;
 			var picture;
+			var plant;
 			
 			for (var i = 0; i < allPlants.length; i++) {
 				plant = allPlants[i];
 				
 				galleryContent[i] = setGallery(plant);
 				
+				picture = document.querySelector('.plant');
 				
-				
-				
+				price = document.querySelector('.price');
 			}
+			
+			
+			
+			
+			
+//			for (var j = 0; i < allPlants.length; j++) {
+//				plant = allPlants[j];
+//				
+//			}
+			
+			
 			
 //			var gallery;
 //			
