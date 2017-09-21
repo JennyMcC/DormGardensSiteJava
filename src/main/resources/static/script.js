@@ -22,17 +22,16 @@ var initPage = function(jsonResponseUrl) {
 				price = document.querySelector('.price');
 		
 			
-			var gallery;
+				var gallery;
 			
-			document.querySelector.addListener(picture, 'click', function(picture, i) {
-				return function() {
-					gallery = new gallery({
-						content : galleryContent[i]
-					});
-					
-				}
-			})(picture, i));
-		}
+				document.querySelector.addListener(picture, 'click', function(picture, i) {
+					return function() {
+						gallery = new gallery({
+							content : galleryContent[i]
+						});
+					}
+				})(picture, i));
+			}
 			
 //			for (var j = 0; i < allPlants.length; j++) {
 //				plant = allPlants[j];
